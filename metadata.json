@@ -1,0 +1,6 @@
+{
+  "name": "United Insurance CRM",
+  "description": "Enterprise Insurance CRM for policy administration, claims processing, customer operations, and branch management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
