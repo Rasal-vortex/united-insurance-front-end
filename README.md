@@ -1,20 +1,16 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# United Insurance CRM MVP
 
-# Run and deploy your AI Studio app
+The frontend uses Next.js App Router, React, and JavaScript. The prototype API remains in the Express server and shares its process with Next.js.
 
-This contains everything you need to run your app locally.
+## Run locally
 
-View your app in AI Studio: https://ai.studio/apps/17fa90a7-86f7-44cd-b3a6-3df0b3c98d2d
+```bash
+npm install
+npm run dev
+```
 
-## Run Locally
+Open `http://localhost:3000`. To create a production build, run `npm run build`, then `npm start`.
 
-**Prerequisites:**  Node.js
+The existing screens are in `src/screens`; the shared shell and dialogs are in `src/components`. `src/App.jsx` currently routes between those screens. Next.js loads the client app through `src/app/[[...path]]/page.jsx`. Frontend API calls are in `src/services` and `src/lib/api-client.js`; they use `NEXT_PUBLIC_API_BASE_URL` to connect to the backend.
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Set `NEXT_PUBLIC_API_BASE_URL` only when the API is hosted separately. When frontend and API share the server, leave it unset.
